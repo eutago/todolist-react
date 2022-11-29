@@ -1,0 +1,107 @@
+.App {
+  width: 900px;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  color: #fff;
+}
+
+.Form {
+  background-color: #fff;
+  width: 60%;
+  height: 8%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  border-radius: .5rem;
+}
+
+.Form > input {
+  width: 70%;
+  height: 75%;
+  border: 1px solid #000;
+  border-radius: .5rem;
+  padding: 1rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.Form > button {
+  width: 20%;
+  height: 75%;
+  font-size: 1.3rem;
+  font-weight: 600;
+  border-radius: .5rem;
+  border: none;
+  color: #fff;
+  background-color: #125ac8;
+  cursor: pointer;
+}
+
+.List {
+  /* background-color: red; */
+  width: 60%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+  gap: 1rem;
+}
+
+.List > li {
+  background-color: #fff;
+  color: #000;
+  width: 100%;
+  height: 7%;
+  border: none;
+  border-radius: .5rem;
+  font-size: 1.3rem;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.List > li > div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  gap: .7rem;
+  justify-content: start;
+  align-items: center;
+}
+
+.icon {
+  cursor: pointer;
+  height: 100%;
+  width: 10%;
+  color: #fff;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.4rem;
+}
+
+.trashIcon {
+  background-color: #E74C3C;
+  border-top-right-radius: .5rem;
+  border-bottom-right-radius: .5rem;
+}
+
+.doneIcon {
+  border-top-left-radius: .5rem;
+  border-bottom-left-radius: .5rem;
+  background-color: #27AE60;
+}
+
+.done {
+  text-decoration: line-through;
+  background-color: yellow;
+}
