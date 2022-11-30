@@ -16,11 +16,6 @@ const List = () => {
     setItems(updatedItems);
   };
 
-  const onDelete = (item) => {
-    const updatedItems = items.filter((it) => it.id !== !item.id);
-    setItems(updatedItems);
-  };
-
   return (
     <ul className="List">
       {items.map((item) => (

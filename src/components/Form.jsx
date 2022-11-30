@@ -14,6 +14,18 @@ const Form = () => {
     }
   };
 
+  useEffect(() => {
+    const savedItems = JSON.parse(localStorage.getItem('todos'));
+
+    if (savedItems) {
+      setItems(savedItems);
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem('todos', JSON.stringify(items));
+  }, [items]);
+
   return (
     <form className="Form">
       <input
