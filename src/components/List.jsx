@@ -16,6 +16,15 @@ const List = () => {
     setItems(updatedItems);
   };
 
+  const onDelete = (item) => {
+    const todos = JSON.parse(localStorage.getItem('todos')).filter(
+      (todo) => todo.id !== item.id
+    );
+
+    localStorage.setItem('todos', JSON.stringify(todos));
+    setItems(todos);
+  };
+
   return (
     <ul className="List">
       {items.map((item) => (

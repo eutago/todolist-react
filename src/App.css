@@ -1,9 +1,10 @@
 .App {
-  width: 900px;
+  width: 100%;
   height: 100vh;
   margin: 0 auto;
   padding: 3rem;
   display: flex;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
@@ -12,7 +13,7 @@
 
 .Form {
   background-color: #fff;
-  width: 60%;
+  width: 30%;
   height: 8%;
   display: flex;
   justify-content: center;
@@ -30,7 +31,7 @@
   font-size: 1.2rem;
   font-weight: 500;
 }
-
+ 
 .Form > button {
   width: 20%;
   height: 75%;
@@ -44,8 +45,7 @@
 }
 
 .List {
-  /* background-color: red; */
-  width: 60%;
+  width: 30%;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -68,7 +68,14 @@
   align-items: center;
 }
 
+.List > li:hover {
+  background-color: #f3f3f3;
+  cursor: pointer;
+}
+
 .List > li > div {
+  word-break: break-all;
+  word-wrap: break-word;
   width: 100%;
   height: 100%;
   display: flex;
@@ -95,13 +102,84 @@
   border-bottom-right-radius: .5rem;
 }
 
+.trashIcon:hover {
+  background-color: #B93B2D;
+}
+
 .doneIcon {
   border-top-left-radius: .5rem;
   border-bottom-left-radius: .5rem;
   background-color: #27AE60;
 }
 
+.doneIcon:hover {
+  background-color: #1F8B4C;
+}
+
 .done {
   text-decoration: line-through;
-  background-color: yellow;
+}
+
+@media screen and (min-width: 1279px) and (min-height: 500px) {
+  .Form {
+    width: 30%;
+    height: 4rem;
+  }
+
+  .List {
+    width: 30%;
+  }
+
+  .List > li {
+    height: 3rem;
+  }
+}
+
+@media screen and (max-width: 1278px) and (min-height: 500px) {
+  .Form {
+    width: 70%;
+    height: 4rem;
+  }
+
+  .List {
+    width: 70%;
+  }
+
+  .List > li {
+    height: 3rem;
+  }
+}
+
+@media screen and (max-width: 769px) and (min-height: 500px) {
+  .Form {
+    width: 95%;
+    height: 4rem;
+  }
+
+  .List {
+    width: 95%;
+  }
+
+  .List > li {
+    height: 3rem;
+  }
+}
+
+@media screen and (max-width: 320px) and (min-height: 500px) {
+  .App {
+    padding: 0;
+  }
+
+  .Form {
+    width: 100%;
+    height: 4rem;
+  }
+
+  .List {
+    width: 95%;
+  }
+
+  .List > li {
+    height: 3rem;
+  }
 }
